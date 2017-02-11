@@ -1,5 +1,24 @@
-<!-- Always shows a header, even in smaller screens. -->
-<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+<DocType HTML>
+<html>
+  <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+      <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+      <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+      <script src="https://cdn.rawgit.com/naptha/tesseract.js/0.2.0/dist/tesseract.js">
+      </script>
+      <style type="text/css">
+        nav{
+          color: 
+        }
+        body {
+          background-image: url("bg2.png");
+          min-height: 100%;
+          opacity: 60%;
+        }
+      </style>
+    </head>
+ <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">   
   <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
       <!-- Title -->
@@ -12,20 +31,7 @@
         <a class="mdl-navigation__link" href="">Login</a>
       </nav>
     </div>
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-      <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
-      <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-      <script src="https://cdn.rawgit.com/naptha/tesseract.js/0.2.0/dist/tesseract.js">
-      </script>
-      <style type="text/css">
-        body {
-          background-image: url("bg2.png");
-          min-height: 100%;
-        }
-      </style>
-    </head>
+
   </header>
   <div class="mdl-layout__drawer">
     <span class="mdl-layout-title">Options</span>
@@ -40,6 +46,8 @@
     <div class="page-content">
       <h1>Welcome to Scandalous Scanneru</h1><br>
       <h3>Begin Scanning files below</h3><br>
+       <!-- MDL Progress Bar with Indeterminate Progress -->
+      <div id="p2" class="mdl-progress mdl-js-progress mdl-progress__indeterminate"></div>
       <body>
       
       <div id="tt3" class="icon material-icons">cloud_upload</div>
@@ -60,9 +68,9 @@
       Share your content<br>via social media
       </div>
 
-      <!-- MDL Progress Bar with Indeterminate Progress -->
-      <div id="p2" class="mdl-progress mdl-js-progress mdl-progress__indeterminate"></div>
+     
       </body>
     </div>
   </main>
 </div>
+</html>
