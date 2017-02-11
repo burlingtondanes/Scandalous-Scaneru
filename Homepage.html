@@ -1,0 +1,58 @@
+<!-- Always shows a header, even in smaller screens. -->
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <span class="mdl-layout-title">Scandalous Scaneru</span>
+      <!-- Add spacer, to align navigation to the right -->
+      <div class="mdl-layout-spacer"></div>
+      <!-- Navigation. We hide it in small screens. -->
+      <nav class="mdl-navigation mdl-layout--large-screen-only">
+        <a class="mdl-navigation__link" href="">Sign Up</a>
+        <a class="mdl-navigation__link" href="">Login</a>
+      </nav>
+    </div>
+    <head>
+      <script src="https://cdn.rawgit.com/naptha/tesseract.js/0.2.0/dist/tesseract.js">
+      </script>
+    </head>
+  </header>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">Options</span>
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" href="">Scanner</a>
+      <a class="mdl-navigation__link" href="">Existing...</a>
+      <a class="mdl-navigation__link" href="">Share</a>
+      <a class="mdl-navigation__link" href="">Link</a>
+    </nav>
+  </div>
+  <main class="mdl-layout__content">
+    <div class="page-content">
+      <h1>Welcome to Scandalous Scanneru</h1><br>
+      <h3>Begin Scanning files below</h3><br>
+      <body>
+      
+      <div id="tt3" class="icon material-icons">cloud_upload</div>
+      <div class="mdl-tooltip" data-mdl-for="tt3">
+      <input type="text" id="url" placeholder="Image URL" />
+      <input type="button" id="go_button" value="Run" />
+      <div id="ocr_results"> </div>
+      <div id="ocr_status"> </div>
+      Upload <strong>file.zip</strong>
+      </div>
+
+      <div id="tt4" class="icon material-icons">share</div>
+      <div class="mdl-tooltip" for="tt4">
+      <input type="file" capture="camera" accept="image/*" id="cameraInput" name="cameraInput">
+      <input type="button" id="go_button" value="Run" />
+      <div id="ocr_results"> </div>
+      <div id="ocr_status"> </div>
+      Share your content<br>via social media
+      </div>
+
+      <!-- MDL Progress Bar with Indeterminate Progress -->
+      <div id="p2" class="mdl-progress mdl-js-progress mdl-progress__indeterminate"></div>
+      </body>
+    </div>
+  </main>
+</div>
