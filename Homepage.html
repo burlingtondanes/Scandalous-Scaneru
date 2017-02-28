@@ -22,19 +22,54 @@
           float: right;
           margin: 0 0 10px 10px;
         }
+		body {
+		margin: 0;
+		font-family: 'Permanent Marker', cursive;
+		}
+
+		.gradient {
+		position: relative;
+		height: 100vh;
+		width: 100%;
+		background-image: linear-gradient(180deg,#4ac1ff,#795bb0);
+	
+		h1 {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		font-size: 40px;
+		background-color: skyBlue;
+		background-image: -webkit-linear-gradient(left, #fff 0%, #42f480 50%, transparent 50%);
+		background-position: 100% 0;
+		background-size: 200% 200%;
+		color: transparent;
+		-webkit-transition: .05s .1s;
+		-webkit-background-clip: text;
+		cursor: pointer;
+		text-align: center;
+		
+		&:hover {
+			background-position: 0 0;
+			color: transparent;
+			transition: .3s 0;
+		}
+		}
+		}
+
       </style>
     </head>
  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">   
   <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
       <!-- Title -->
-      <span class="mdl-layout-title">Scandalous Scaneru</span>
+      <div class="gradient"><span class="mdl-layout-title">Scandalous Scaneru</span></div>
       <!-- Add spacer, to align navigation to the right -->
       <div class="mdl-layout-spacer"></div>
       <!-- Navigation. We hide it in small screens. -->
       <nav class="mdl-navigation mdl-layout--large-screen-only">
-        <a class="mdl-navigation__link" href="">Sign Up</a>
-        <a class="mdl-navigation__link" href="">Login</a>
+        <div class="gradient"><a class="mdl-navigation__link" href="">Sign Up</a></div>
+        <div class="gradient"><a class="mdl-navigation__link" href="">Login</a></div>
       </nav>
     </div>
 
@@ -50,36 +85,20 @@
   </div>
   <main class="mdl-layout__content">
     <div class="page-content">
-      <h1>Welcome to Scandalous Scanneru</h1>
-      <h3>Begin Scanning files below</h3>
-      <body>
+      
+    <div class="gradient"><h3>Begin Scanning files below</h3></div>
+		<body>
+			<input type="text" id="url" placeholder="Image URL" />
+			<input type="button" id="go_button" value="Run" />
+			<div id="ocr_results"> </div>
+			<div id="ocr_status"> </div>
 
-      <div class="row">
-        <div class="col-sm-6 col-md-4">
-          <div class="thumbnail">
-            <img src="http://www.uploadhinh.com/content/images/system/logo_homepage_20150714083101.png" alt="...">
-            <div class="caption">
-              <h3>Upload!</h3>
-              <p>Upload file here</p>
-                <input type="text" id="url" placeholder="Image URL" />
-                <input type="button" id="go_button" value="Run" />
-                <div id="ocr_results"> </div>
-               <div id="ocr_status"> </div>
-      
-               <input type="file" capture="camera" accept="image/*" id="cameraInput" name="cameraInput">
-                <div id="ocr_results"> </div>
-                <div id="ocr_status"> </div>
-            </div>
-                <div id="p2" class="mdl-progress mdl-js-progress mdl-progress__indeterminate"></div>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      
-     
-      </body>
+
+			<input type="file" capture="camera" accept="image/*" id="cameraInput" name="cameraInput">
+			<input type="button" id="go_button" value="Run" />
+			<div id="ocr_results"> </div>
+			<div id="ocr_status"> </div>
+		</body>
     </div>
   </main>
 </div>
